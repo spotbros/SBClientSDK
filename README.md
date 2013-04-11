@@ -14,6 +14,8 @@ Support
 ---------------
 Join us on the [SBPortal Google Group][3] and ask any question you have. We will be happy to help
 
+We have also created a spot to provide support. Its SBCode is E43ZFZJ or look for "Developers" in Spotbros
+
 Bugs & Issues
 -------------
 If you find any bug or issue, please report it [here][4] . Please, before submitting a new issue, make sure that it has not been already reported.
