@@ -5,7 +5,7 @@ Build SBApps and communicate with Spotbros' users
 First steps
 ---------------
 
- - Clone the repository: `git clone git@github.com:spotbros/SBClientAPI.git`
+ - Clone the repository: `git clone git@github.com:spotbros/SBClientSDK.git`
  - Navigate to [Spotbros Developer Portal][1] and sign up
  - Read our [documentation][2], where you will find how to start building SBApps
  - Check out our sample SBApps under /examples
