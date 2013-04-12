@@ -10,6 +10,10 @@ require_once(__DIR__.'/php-classes/class_SBAttachments.php');
  */
 abstract class SBApp extends SBClientApi
 {
+	
+	private $_fromUserSBCode = false;
+	
+	
 	/**
 	 * Creates a new instance of SBApp
 	 * @param string $appSBCode_	the SBApp's sbcode
@@ -96,6 +100,7 @@ abstract class SBApp extends SBClientApi
               $fromUser->setSBUserLocation($requestData["userLatitude"], $requestData["userLongitude"]);
               $fromUser->setSBUserPhoneKey($requestData["userPhoneKey"]);
               $fromUser->setSBUserLanguage($requestData["userLanguage"]);
+              $this->_fromUserSBCode = $fromUser->getSBUserSBCodeOrFalse();
               $this->onNewMessage($this->_SBMessage);
             }
             else
@@ -113,6 +118,7 @@ abstract class SBApp extends SBClientApi
               $fromUser->setSBUserLocation($requestData["userLatitude"], $requestData["userLongitude"]);
               $fromUser->setSBUserPhoneKey($requestData["userPhoneKey"]);
               $fromUser->setSBUserLanguage($requestData["userLanguage"]);
+              $this->_fromUserSBCode = $fromUser->getSBUserSBCodeOrFalse();
               $this->onNewContactSubscription($fromUser);
             }
             else
@@ -130,6 +136,7 @@ abstract class SBApp extends SBClientApi
               $fromUser->setSBUserLocation($requestData["userLatitude"], $requestData["userLongitude"]);
               $fromUser->setSBUserPhoneKey($requestData["userPhoneKey"]);
               $fromUser->setSBUserLanguage($requestData["userLanguage"]);
+              $this->_fromUserSBCode = $fromUser->getSBUserSBCodeOrFalse();
               $this->onNewContactUnSubscription($fromUser);
             }
             else
@@ -149,6 +156,7 @@ abstract class SBApp extends SBClientApi
               $fromUser->setSBUserLanguage($requestData["userLanguage"]);
               if(is_array($rating=$requestData["rating"]))
               {
+              	$this->_fromUserSBCode = $fromUser->getSBUserSBCodeOrFalse();
                 $this->onNewVote($fromUser,$requestData["vote"],$rating["oldRating"],$rating["newRating"]);
               }
               else
@@ -161,9 +169,9 @@ abstract class SBApp extends SBClientApi
             break;            
           }
           case SBAppEventType::NEW_PING:
-          	{
+          {
           		printJson("PingOk");
-          	}
+          }
       }
     }
     else
@@ -177,12 +185,9 @@ abstract class SBApp extends SBClientApi
    */
   public function replyOrFalse($msgText_)
   {
-    if(
-        (($user=$this->_SBMessage->getSBMessageFromUserOrFalse()) != false) &&
-        (($userSBCode=$user->getSBUserSBCodeOrFalse()) != false)
-      )
+    if($this->_fromUserSBCode)
     {
-      return $this->sendTextMessageOrFalse($msgText_, $userSBCode);
+      return $this->sendTextMessageOrFalse($msgText_, $this->_fromUserSBCode);
     }
     return false;
   }
