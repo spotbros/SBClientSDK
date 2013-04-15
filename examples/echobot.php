@@ -1,8 +1,5 @@
 <?php
 require_once('../SBClientSDK/SBApp.php');
-$echoBotSBCode = "[SBCode]";
-$echoBotKey = "[key]";
-
 class EchoBot extends SBApp
 {
 	protected function onError($errorType_)
@@ -35,6 +32,9 @@ class EchoBot extends SBApp
 		}
 	}
 }
+// Create a new SBApp on dev.spotbros.com and copy-paste your SBCode and key
+$echoBotSBCode = "[SBCode]";
+$echoBotKey = "[key]";
 $echoBot=new EchoBot($echoBotSBCode,$echoBotKey);
 $echoBot->serveRequest($_GET["params"]);
 ?>
