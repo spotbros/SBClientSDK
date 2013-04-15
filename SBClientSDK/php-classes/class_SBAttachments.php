@@ -1,7 +1,7 @@
 <?php
-require_once(__DIR__.'/class_CurlMngr.php');
-require_once(__DIR__.'/../includes/SBTypes.php');
-require_once(__DIR__.'/../includes/SBFunctions.php');
+require_once(dirname(__FILE__).'/class_CurlMngr.php');
+require_once(dirname(__FILE__).'/../includes/SBTypes.php');
+require_once(dirname(__FILE__).'/../includes/SBFunctions.php');
 /**
  * SBAttachments
  *

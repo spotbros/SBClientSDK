@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__.'/../includes/SBFunctions.php');
+require_once(dirname(__FILE__).'/../includes/SBFunctions.php');
 /**
  * CurlMngr
  * 

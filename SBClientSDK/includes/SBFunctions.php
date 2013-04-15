@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__.'/SBTypes.php');
+require_once(dirname(__FILE__).'/SBTypes.php');
 /**
  * Inspects an object of a given class and returns an array containing its constants
  * @param mixed $object_	the object to be inspected

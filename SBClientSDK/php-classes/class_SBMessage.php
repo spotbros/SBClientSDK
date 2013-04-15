@@ -1,7 +1,7 @@
 <?php
-require_once(__DIR__.'/class_CurlMngr.php');
-require_once(__DIR__.'/class_SBUser.php');
-require_once(__DIR__.'/../includes/SBFunctions.php');
+require_once(dirname(__FILE__).'/class_CurlMngr.php');
+require_once(dirname(__FILE__).'/class_SBUser.php');
+require_once(dirname(__FILE__).'/../includes/SBFunctions.php');
 /**
  * SBMessage
  * 

@@ -1,7 +1,7 @@
 <?php
-require_once(__DIR__.'/SBClientApi.php');
-require_once(__DIR__.'/php-classes/class_SBMessage.php');
-require_once(__DIR__.'/php-classes/class_SBAttachments.php');
+require_once(dirname(__FILE__).'/SBClientApi.php');
+require_once(dirname(__FILE__).'/php-classes/class_SBMessage.php');
+require_once(dirname(__FILE__).'/php-classes/class_SBAttachments.php');
 /**
  * SBApp
  *

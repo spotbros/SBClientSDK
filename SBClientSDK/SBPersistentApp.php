@@ -1,6 +1,6 @@
 <?php
-require_once(__DIR__.'/SBApp.php');
-require_once(__DIR__.'/includes/predis/predis.php');
+require_once(dirname(__FILE__).'/SBApp.php');
+require_once(dirname(__FILE__).'/includes/predis/predis.php');
 /**
  * SBPersistentApp
  *
