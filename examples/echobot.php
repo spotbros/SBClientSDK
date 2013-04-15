@@ -21,7 +21,7 @@ class EchoBot extends SBApp
 	{
 		if(($userName = $user_->getSBUserNameOrFalse()))
 		{
-			$this->replyOrFalse("See you soon ".$userName."!");
+			error_log($userName." just unsubscribed");
 		}
 	}
 	protected function onNewMessage(SBMessage $msg_)
