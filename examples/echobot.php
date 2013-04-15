@@ -1,5 +1,8 @@
 <?php
 require_once('../SBClientSDK/SBApp.php');
+$echoBotSBCode = "[SBCode]";
+$echoBotKey = "[key]";
+
 class EchoBot extends SBApp
 {
 	protected function onError($errorType_)
