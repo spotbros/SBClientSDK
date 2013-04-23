@@ -286,6 +286,14 @@ class SBUser
 		return $this->isDataLoaded()?($this->getSBUserLatitudeOrFalse().",".$this->getSBUserLongitudeOrFalse()):false;
 	}
 	/**
+	 * Gets user's language
+	 * @return string	the user's language
+	 */
+	public function getSBUserLanguageOrFalse()
+	{
+		return $this->isDataLoaded()?$this->_userLanguage:false;
+	}
+	/**
 	 * Sets user's email
 	 * @param string $userEmail_	the user's new email
 	 */
