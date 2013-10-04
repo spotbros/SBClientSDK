@@ -92,6 +92,7 @@ final class SBAttachmentType{
 final class StorageLocation{
   const AMAZON_S3						= "AS3";
   const CASSANDRA_CLUSTER		= "CAS";
+  const AMAZON_S3_CLOUD			= "CLOUD";
 }
 /**
  * SBConstants: miscelaneous constants

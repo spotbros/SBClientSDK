@@ -160,6 +160,7 @@ class SBMessage
               {
                 switch($attachmentInfo["storageLocation"])
                 {
+                	case StorageLocation::AMAZON_S3_CLOUD:
                   case StorageLocation::AMAZON_S3:
                   {
                     $tmpAttachment=array(
