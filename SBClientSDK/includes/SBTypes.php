@@ -50,7 +50,7 @@ final class SBAppEventType{
  * @version 0.01
  */
 final class SBVars{
-  const SB_WEBSERVICE_ADDR = "https://sbmail.me";
+  const SB_WEBSERVICE_ADDR = "https://sslbal.spotbros.com";
 }
 /**
  * SBAttachmentType: available attachment types
